@@ -1,12 +1,9 @@
-// ============================================================
-// COLE AQUI AS CONFIGURAÇÕES DO SEU PROJETO FIREBASE.
-// Você encontra isso em Firebase Console > Project settings > Your apps.
-// ============================================================
+// Configuração do Firebase do RPG Table
 export const firebaseConfig = {
-  apiKey: "COLE_AQUI",
-  authDomain: "COLE_AQUI.firebaseapp.com",
-  projectId: "COLE_AQUI",
-  storageBucket: "COLE_AQUI.firebasestorage.app",
-  messagingSenderId: "COLE_AQUI",
-  appId: "COLE_AQUI"
+  apiKey: "AIzaSyCZwIhxO5bNxIUfN-f3cfJ_ibCqJ-YH4Is",
+  authDomain: "rpgyumi.firebaseapp.com",
+  projectId: "rpgyumi",
+  storageBucket: "rpgyumi.firebasestorage.app",
+  messagingSenderId: "452460353752",
+  appId: "1:452460353752:web:aef4981386d6528de9dfad"
 };
