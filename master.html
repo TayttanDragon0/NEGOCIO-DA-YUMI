@@ -1,0 +1,19 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RPG Table - Mestre</title><link rel="stylesheet" href="style.css"></head><body>
+<header><b>🎲 RPG <span>TABLE</span></b><span class="role">🎭 MESTRE</span><div class="grow"></div><button id="newScene">＋ Cena</button><button id="saveFile">💾 Salvar arquivo</button><button id="loadFile">📂 Abrir arquivo</button><input id="file" type="file" accept=".json" hidden></header>
+<div id="app"><aside><h3>📁 Biblioteca</h3><button id="import">🖼️ Importar imagens</button><input id="images" type="file" accept="image/*" multiple hidden>
+<div class="section"><h4>👤 PERSONAGENS</h4><div id="characters"></div><button id="newCharacter">＋ Criar personagem</button></div>
+<div class="section"><h4>📦 OBJETOS</h4><div id="assets"></div></div>
+<div class="section"><h4>🎬 CENAS</h4><div id="scenes"></div></div></aside>
+<main id="viewport"><div id="world"></div><div id="empty">Arraste objetos e personagens para a mesa.</div></main>
+<aside><h3>🎛️ Seleção</h3><div id="inspector">Selecione um objeto.</div><hr><h3>🌐 Sala online</h3><p class="muted">Para multiplayer no GitHub Pages, conecte o Firebase.</p><button id="roomInfo">Configurar sala</button></aside></div>
+<div id="modal" class="modal hidden"><div class="dialog"><h2>📋 Ficha de Personagem</h2><div class="grid">
+<label>Nome<input id="cName"></label><label>Tipo de Universo<input id="universe"></label>
+<label class="full">Aparência<textarea id="appearance"></textarea></label><label class="full">Arma inicial<input id="weapon"></label>
+<label class="full">Personalidade<textarea id="personality"></textarea></label>
+<label>Vida<input id="life" type="number" value="100"></label><label>Cansaço<input id="fatigue" type="number" value="0"></label>
+<label>Defesas<input id="defenses"></label><label>Porte<input id="build"></label>
+<label>Força<input id="strength" type="number"></label><label>Velocidade<input id="speed" type="number"></label><label>Inteligência<input id="intelligence" type="number"></label>
+<label class="full">Proficiências<textarea id="proficiencies"></textarea></label><label class="full">Focos de poder<textarea id="powers"></textarea></label>
+<label class="full">Pontos fracos<textarea id="weaknesses"></textarea></label><label class="full">História<textarea id="history"></textarea></label>
+</div><div class="actions"><button id="cancel">Cancelar</button><button id="saveCharacter">Salvar personagem</button></div></div></div>
+<script src="app.js"></script></body></html>
