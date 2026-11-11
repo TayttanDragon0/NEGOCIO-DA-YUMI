@@ -1,0 +1,16 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RPG Table - Mestre</title><link rel="stylesheet" href="style.css"></head><body>
+<header><b>🎲 RPG <span>TABLE</span></b><span class="role">🎭 MESTRE</span><div class="grow"></div><span id="roomLabel" class="room hidden"></span><a href="index.html">Sair</a></header>
+<div id="app"><aside><button id="createRoom">🚀 Criar sala online</button><div id="roomPanel" class="hidden"><div id="roomCode" class="code"></div><button id="copyRoom">🔗 Copiar link</button></div>
+<div class="section"><h4>IMAGENS / OBJETOS</h4><button id="import">🖼️ Importar imagens</button><input id="images" type="file" accept="image/*" multiple hidden><div id="assets"></div></div>
+<div class="section"><h4>PERSONAGENS</h4><button id="newCharacter">➕ Nova ficha</button><div id="characters"></div></div>
+<div class="section"><h4>CENAS</h4><button id="newScene">➕ Nova cena</button><button id="background">🗺️ Fundo da cena</button><input id="backgroundFile" type="file" accept="image/*" hidden><div id="scenes"></div></div>
+<div class="section"><button id="saveFile">💾 Baixar campanha</button><button id="loadFile">📂 Abrir campanha</button><input id="file" type="file" accept=".json" hidden></div></aside>
+<main id="viewport"><div id="world"></div><div id="empty">Crie uma sala, importe imagens e arraste-as para a mesa.</div></main>
+<aside><h3>INSPECIONAR</h3><div id="inspector"><p class="muted">Clique em um objeto.</p></div></aside></div>
+<div id="modal" class="modal hidden"><div class="dialog"><h2>Ficha de personagem</h2><div class="grid">
+<label>Nome<input id="cName"></label><label>Aparência<textarea id="appearance"></textarea></label><label>Arma inicial<input id="weapon"></label><label>Personalidade<input id="personality"></label>
+<label>Vida<input id="life" type="number"></label><label>Cansaço<input id="fatigue" type="number"></label><label>Defesas<input id="defenses"></label><label>Força<input id="strength" type="number"></label>
+<label>Velocidade<input id="speed" type="number"></label><label>Inteligência<input id="intelligence" type="number"></label><label>Porte<input id="build"></label><label>Proficiências<textarea id="proficiencies"></textarea></label>
+<label>Focos de poder<textarea id="powers"></textarea></label><label>Pontos fracos<textarea id="weaknesses"></textarea></label><label>Tipo de Universo<input id="universe"></label><label class="full">História<textarea id="history"></textarea></label></div>
+<div class="actions"><button id="cancel">Cancelar</button><button id="saveCharacter">Salvar ficha</button></div></div></div>
+<script type="module" src="master.js"></script></body></html>

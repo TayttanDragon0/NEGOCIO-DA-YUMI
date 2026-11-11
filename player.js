@@ -1,0 +1,5 @@
+import{$,currentScene}from"./common.js";import{db,readyAuth,doc,getDoc,onSnapshot}from"./firebase.js";
+let stop=null;
+function render(state){let s=currentScene(state),w=$("world");w.innerHTML="";w.style.backgroundImage=s.background?`url("${s.background}")`:"";s.tokens.forEach(t=>{let e=document.createElement("div");e.className="token";e.style.cssText=`left:${t.x}px;top:${t.y}px;width:${t.w}px;height:${t.h}px`;e.innerHTML=`<img src="${t.src}"><span>${t.name}</span>`;w.append(e)});$("empty").style.display=s.tokens.length?"none":"block";}
+async function join(room){try{await readyAuth();let ref=doc(db,"rpgRooms",room),snap=await getDoc(ref);if(!snap.exists())throw new Error("Sala não encontrada.");$("joinBox").classList.add("hidden");$("game").classList.remove("hidden");$("roomName").textContent="SALA "+room;if(stop)stop();stop=onSnapshot(ref,s=>{if(s.exists())render(s.data().state)});}catch(e){$("error").textContent=e.message;console.error(e)}}
+let q=new URLSearchParams(location.search).get("room");if(q){$("roomCode").value=q;join(q)}$("join").onclick=()=>join($("roomCode").value.trim().toUpperCase());
